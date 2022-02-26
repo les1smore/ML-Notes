@@ -1,10 +1,18 @@
 # mlnotes
 Machine Learning Notes
 
-## PCA
-A technique that transforms high-dimensional data into lower dimensions while retaining as much information as possible.
+## PCA 
+A dimensionality reduction technique for data sets with many features or dimentsions. It uses linear algebra to determine the most important features of a dataset. After these features have been identified, you can use only the most important features or those that explain the most variance, to train a machine learning model and improve the computational performance of the model without sacrificing accuracy.
 
-Reference: https://medium.com/towards-data-science/principal-component-analysis-pca-explained-visually-with-zero-math-1cbf392b9e7d
+Two criteria:
+- The maximum vriance
+- The minimum error
+
+
+Reference: 
+1. https://medium.com/towards-data-science/principal-component-analysis-pca-explained-visually-with-zero-math-1cbf392b9e7d
+2. https://towardsdatascience.com/2-beautiful-ways-to-visualize-pca-43d737e48ff7
+3. https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues/140579
 
 ## Decision Tree
 The algorithm works based on the decision on the conditions of the features. Nodes are the conditions or tests on an attribute, branch represents the outcome of the tests, and lead nodes are the decisions based on the conditions.
