@@ -33,9 +33,10 @@ The algorithm works based on the decision on the conditions of the features. Nod
 Reference: https://towardsdatascience.com/simple-explanation-on-how-decision-tree-algorithm-makes-decisions-34f56be344e9
 
 ## Poisson Regression Model
-The Poisson distribution has the following *Probability Mass Function*
-![image](https://user-images.githubusercontent.com/60702562/157318921-b2435859-c0e6-47cb-9a84-c97df2ddd4c3.png)
+We already know about the Linear Regression, which helps us answer questions like “How much will a house with these characteristics cost?”. Or the Logistic Regression, which is used to model the probability of a certain class or event existing such as pass/fail, win/lose, alive/dead or healthy/sick.
+But, what happens when the questions are “How many costumers will come today?”, “How many people are in line at the grocery store?”, “How many…”, and one way to answer these questions is using the Poisson Regression Model.
 
+Poisson Regression is used to model count data. For this, we assume the response variable Y has a *Poisson Distribution*, and assumes the logarithm of its expected value can be modeled by a linear combinations of unknown parameters.
 The expected value (mean) for a Poisson distribution is λ. Thus in the absence of other information, one should expect to see λ events in any unit time interval such as 1 hour, 1 day, etc. For any interval t, one would expect to see λt events.
 
 - Count based data
@@ -50,4 +51,6 @@ A data set of counts has the following characteristics:
   - **Sparsity**: The data may reflect the occurrence of a rare event of a rare event such as a gamma ray burst, thereby making the data sparse.
   - **Rate of occurrence**: For the sake of creating a model, it can be assumed that there is a certain rate of occurrence of events λ that drives the generation of such data. The event rate may drift over time.
 
-Refrence: https://towardsdatascience.com/an-illustrated-guide-to-the-poisson-regression-model-50cccba15958
+Refrence: 
+1. https://towardsdatascience.com/an-illustrated-guide-to-the-poisson-regression-model-50cccba15958
+2. https://medium.com/lcc-unison/how-to-poisson-regression-model-python-implementation-1c672582eb96
