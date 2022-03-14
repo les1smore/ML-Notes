@@ -2,18 +2,35 @@
 Machine Learning Notes
 
 ## PCA 
-A dimensionality reduction technique for data sets with many features or dimentsions. It uses linear algebra to determine the most important features of a dataset. After these features have been identified, you can use only the most important features or those that explain the most variance, to train a machine learning model and improve the computational performance of the model without sacrificing accuracy.
+- A dimensionality reduction technique (Feature Extration) for data sets with many features or dimentsions. It uses linear algebra to determine the most important features of a dataset. After these features have been identified, you can use only the most important features or those that explain the most variance, to train a machine learning model and improve the computational performance of the model without sacrificing accuracy.
+- Each of the "new" variables after PCA are all independent of one another, this is a benefit because the assumptions of a linear model requre our independent variables to be independent of one another. 
+
+- When should I use PCA?
+1. Do you want to reduce the number of variables, but aren't able to identify variables to completely remove from consideration?
+2. Do you want to ensure your variables are independent of one another?
+3. Are you comfortable making your independent variables less interpretable?
+   If you answered “yes” to all three questions, then PCA is a good method to use. 
+   If you answered “no” to question 3, you should not use PCA.
+
+- PCA is a method that bring together:
+1. A measure of how each variable is associated with one another. (Covariance matrix)
+2. The directions in which our data are dispersed.(Eigenvectors)
+3. The relative importance of these different directions. (Eigenvalues)
 
 Two criteria:
 - The maximum vriance
 - The minimum error
 
+## Dimension Reduction
+- Feature elimination: We reduce the feature space by eliminating features. Advantages of feature elimination methods include simplicity and maintaining interpretability of your variables. Disadvantages include no information from those variables that are dropped.
+- Feature extration: We create new independent variable which is a combination of each of the old independent variables by how well they predict our dependent variable.
 
 Reference: 
 1. https://medium.com/towards-data-science/principal-component-analysis-pca-explained-visually-with-zero-math-1cbf392b9e7d
 2. https://towardsdatascience.com/2-beautiful-ways-to-visualize-pca-43d737e48ff7
 3. https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues/140579
 4. https://towardsdatascience.com/2-beautiful-ways-to-visualize-pca-43d737e48ff7
+5. https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c
 
 ## Decision Tree
 The algorithm works based on the decision on the conditions of the features. Nodes are the conditions or tests on an attribute, branch represents the outcome of the tests, and lead nodes are the decisions based on the conditions.
