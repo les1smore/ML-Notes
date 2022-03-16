@@ -58,4 +58,4 @@ y_pred = predict(poly_reg, data.frame(Level = 6.5,
                                       Level4 = 6.5^4)) # make sure the 6.5 value showed in four levels 
 
 
-
+ 
