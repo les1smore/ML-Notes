@@ -5,12 +5,16 @@ Machine Learning Notes
 - A dimensionality reduction technique (Feature Extration) for data sets with many features or dimentsions. It uses linear algebra to determine the most important features of a dataset. After these features have been identified, you can use only the most important features or those that explain the most variance, to train a machine learning model and improve the computational performance of the model without sacrificing accuracy.
 - Each of the "new" variables after PCA are all independent of one another, this is a benefit because the assumptions of a linear model requre our independent variables to be independent of one another. 
 
-- When should I use PCA?
-1. Do you want to reduce the number of variables, but aren't able to identify variables to completely remove from consideration?
-2. Do you want to ensure your variables are independent of one another?
-3. Are you comfortable making your independent variables less interpretable?
-   If you answered “yes” to all three questions, then PCA is a good method to use. 
-   If you answered “no” to question 3, you should not use PCA.
+**Pros:**
+- Removes correlated features: PCA will help you remove all the features that are correlated, a phenomenon known as *multi-collinearity*. Finding features that are correlated is time consuming, especially if the number of features is large.
+- Improve machine learning algorithm performance: With the number of features reduced with PCA, the time taken to train your model is now significantly reduced.
+- Reduce overfitting: By removing the unnecessary features in your dataset, PCA helps to overcome overfitting.
+
+**Cons:**
+- Independent variables are now less interpretable: PCA reduces your features into smaller number of components. Each components is now a linear combination of your orginal features, which makes it less readable and interpretable.
+- Information loss: Data loss may occur if you do not exercise care in choosing the right number of components.
+- Feature scaling: Because PCA is a *variance maximizing exercise*, PCA requires feature to be scaled prior to processing.
+
 
 - PCA is a method that bring together:
 1. A measure of how each variable is associated with one another. (Covariance matrix)
