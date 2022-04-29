@@ -9,7 +9,7 @@ plt.show()
 
 """Convert every coefficient to a dataframe"""
 loadings = pd.DataFrame(data = pca.components_.T * np.sqrt(pca.explained_variance_),
-                        columns = [f'PCA{i}' for i range(1, len(X_train.columns) + 1)],
+                        columns = [f'PCA{i}' for i in range(1, len(X_train.columns) + 1)],
                         index = X_train.columns
                        )
 loadings
