@@ -209,7 +209,7 @@ A model trained with the removal of all missing values creates a robust model.
 - Can cause data leakage
 - Do not factor the covariance between features.
 
-4. Impute missing values for categorical variable
+3. Impute missing values for categorical variable
 When missing values is from categorical columns (string or numerical) then the missing values can be replaced with the most frequent category. If the number of missing values is very large then it can be replaced with a new category.
 
 **Pros:**
@@ -223,12 +223,12 @@ When missing values is from categorical columns (string or numerical) then the m
 - Works only with categorical variables.
 - Addition of new features to the model while encoding, which may result in poor performance
 
-5. Other Imputation Methods
+4. Other Imputation Methods
 Depending on the nature of the data or data type, some other imputation methods may be more appropriate to impute missing values.
 
 For example, for the data variable having longitudal behavior, it might make sense to use the last valid observation to fill the missing value. This is known as the *Last Observation Carried Forward (LOCF)* method
 
-6. Using Algorithms that support missing values
+5. Using Algorithms that support missing values
 All the machine learning algorithms don't support missing values but some ML algorithms are robust to missing values in the dataset. 
 
 - KNN: can ignore a column from a distance measure when a value is missing
@@ -242,8 +242,11 @@ No need to handle missing values in each column as ML algorithms will handle the
 
 No implementation of these ML algorithms in the scikit-learn library.
 
-9. Prediction of missing values
+6. Prediction of missing values
 The regression or classification model can be used for the prediction of missing values depending on the nature (categorical or continuous) of the feature having missing value.
 
-11. Imputation using Deep Learning Library — Datawig
+7. Imputation using Deep Learning Library — Datawig
 This method works very well with categorical, continuous, and non-numerical features. Datawig is a library that learns ML models using Deep Neural Networks to impute missing values in the datagram.
+
+Reference:
+https://towardsdatascience.com/7-ways-to-handle-missing-values-in-machine-learning-1a6326adf79e
