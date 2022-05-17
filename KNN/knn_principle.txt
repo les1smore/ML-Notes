@@ -1,0 +1,9 @@
+The k-Nearest Neighbor (k-NN) Classifier Algorithm
+
+Given a training set X_train with labels y_train, and given a new instance X_test to be classified:
+
+1. Find the most similar instances (let's call them X_NN) to X_test that are in X_train
+
+2. Get the labels y_NN for the instances in X_NN
+
+3. Predict the label for X_test by combining the lables y_NN e.g. simple majority vote
