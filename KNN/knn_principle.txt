@@ -7,3 +7,5 @@ Given a training set X_train with labels y_train, and given a new instance X_tes
 2. Get the labels y_NN for the instances in X_NN
 
 3. Predict the label for X_test by combining the lables y_NN e.g. simple majority vote
+
+As the k approches to 1 (decreases), the model is more likely to overfit as it would tend to capture local trend more effectively - the prediction boundary is more curved. 
