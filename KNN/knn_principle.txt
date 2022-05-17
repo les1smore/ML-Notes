@@ -9,3 +9,11 @@ Given a training set X_train with labels y_train, and given a new instance X_tes
 3. Predict the label for X_test by combining the lables y_NN e.g. simple majority vote
 
 As the k approches to 1 (decreases), the model is more likely to overfit as it would tend to capture local trend more effectively - the prediction boundary is more curved. 
+
+
+Important parameters in KNeighborClassifier and KNeighborsRegressor:
+Model Complexity:
+- n_neighbors: number of nearest neighbors (K) to consider: default = 5
+
+Model fitting:
+- metric: distance function between data points: defauls: Minkowski distance with power parameter p = 2 (Euclidean)
