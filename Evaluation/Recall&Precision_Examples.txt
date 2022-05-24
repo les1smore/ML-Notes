@@ -1,0 +1,19 @@
+Example 1: Recall = TP / TP + FN (Minimize FN)
+Let’s say we were trying to detect if an apple was poison or not. 
+In this case, we would want to reduce the amount of False Negatives because we hope to not miss any poison apples in the batch. 
+Recall would be the best evaluation metric to use here because it measures how many poison apples we might have missed. 
+We are not too concerned with mislabeling an apple as poisonous because we would rather be safe than sorry.
+
+Example 2: Precision = TP / TP + FP (Minimize FP)
+Determing if a stock will be a good investment or not.
+If we were to pour our entire net worth into this one stock, we would better hope that our model is right. 
+We can afford to miss a few profitable stock investments here and there (so recall score is not as important), as long as our money is going to an appreciating stock correctly predicted by our model.
+
+Example 3: Precision = TP / TP + FP
+If you were responsible for tuning a machine to predict a crime before it occurs.
+You want to maximize to ensure no innocent people (people not about to commit a crime) are imprisoned (where crime is positive label)
+In another word, you want to minimize the case when innocent people are incorreclty imprisoned (FP).
+
+Example 4: Recall = TP / TP + FN
+You want to maximize to ensure all criminals (people about to commit a crime) are imprisoned (where crime is the positive label)
+
