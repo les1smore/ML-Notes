@@ -1,0 +1,15 @@
+You are training a naive Bayes classifier, where the number of possible labels, |Y| = 3 and the dimension of the data element, |X| = 100, 
+where every feature (dimension) is binary. 
+
+- How many parameters does the naive Bayes classification model have?
+
+- A Naive Bayes Classifier has two kinds of parameters:
+1. Pr(y) for every u in Y: so if |Y| = 3, there are three such parameters. -- Prior Probability
+2. Pr(x_i|y) for every binary feature x_i in X and y in Y. Specifically, for a particular feature x_1, the parameters are Pr(x_1=1|y) and Pr(x_1=0|y) for every y.
+   So if |X| = 100 binary features and |Y| = 3, there are (2 x 100) x 3 = 600 such features.
+Hence in all, there are 603 parameters.
+
+Note that not all of these features are independent. In particular, Pr(x_i=0|y) = 1-Pr(x_i=1|y), for every x_i and y.
+So, there are only 300 independent parameters of this kind (as the other 300 parameters are just complements of these).
+Similarly, the sum of all prior probabilities Pr(y) should be 1. These means there are only 2 independent prior probabilities. 
+In all, for this example, there are 302 independent parameters. 
